@@ -1,7 +1,7 @@
 package net.wewewe.jellybeansmod;
 
 import net.fabricmc.api.ModInitializer;
-
+import net.wewewe.jellybeansmod.Item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,7 +11,6 @@ public class JellyBeansMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
-		LOGGER.info("Hello Fabric world!");
+		ModItems.RegisterModItems();
 	}
 }
