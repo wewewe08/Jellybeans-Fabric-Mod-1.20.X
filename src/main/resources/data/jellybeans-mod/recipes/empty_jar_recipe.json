@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern":[
+    "##",
+    "##"
+  ],
+  "key":{
+    "#": {
+      "item": "minecraft:glass"
+    }
+  },
+  "result": {
+    "item": "jellybeans-mod:empty_jar",
+    "count": 1
+  }
+}
