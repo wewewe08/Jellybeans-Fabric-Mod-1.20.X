@@ -11,6 +11,6 @@ public class JellyBeansMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModItems.RegisterModItems();
+		ModItems.initialize();
 	}
 }
