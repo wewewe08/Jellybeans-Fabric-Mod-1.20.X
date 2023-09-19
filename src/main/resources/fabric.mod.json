@@ -1,0 +1,39 @@
+{
+	"schemaVersion": 1,
+	"id": "jellybeans-mod",
+	"version": "${version}",
+	"name": "JellyBeans Mod",
+	"description": "Adds jellybeans to minecraft! Jellybeans have a chance to be dropped by mobs and restore half a bar of hunger.",
+	"authors": [
+		"yvonnie"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/jellybeans-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.wewewe.jellybeansmod.JellyBeansMod"
+		],"client": [
+			"net.wewewe.jellybeansmod.JellyBeansModClient"
+		],
+		"fabric-datagen": [
+			"net.wewewe.jellybeansmod.JellyBeansModDataGenerator"
+		]
+	},
+	"mixins": [
+		"jellybeans-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
