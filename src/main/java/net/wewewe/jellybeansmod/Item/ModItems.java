@@ -1,4 +1,5 @@
 package net.wewewe.jellybeansmod.Item;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
@@ -15,12 +16,14 @@ public class ModItems {
     }
 
     //creates a new food item in MINECRAFT
-    public static final Item JELLYBEANS = register(new Item(new Item.Settings().food(new FoodComponent.Builder()
+    public static final Item JELLYBEANS = register(new Item(new FabricItemSettings().food(new FoodComponent.Builder()
             .hunger(1)
             .snack()
             .build())), "jellybeans");
 
     public static void initialize() {
+        JellyBeansMod.LOGGER.info("Registering JELLYBEANS to the FOOD_AND_DRINK item group.");
+
         ItemGroupEvents
                 .modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK) //registers a "modify" event for the FOOD_AND_DRINK item group
                 .register((itemGroup) -> itemGroup.add(ModItems.JELLYBEANS)); //add the item to the group when you get access

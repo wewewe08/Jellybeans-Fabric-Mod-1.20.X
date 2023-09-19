@@ -2,6 +2,7 @@ package net.wewewe.jellybeansmod;
 
 import net.fabricmc.api.ModInitializer;
 import net.wewewe.jellybeansmod.Item.ModItems;
+import net.wewewe.jellybeansmod.util.ModLootTablesModifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,5 +13,7 @@ public class JellyBeansMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.initialize();
+
+		ModLootTablesModifier.ModifyLootTables();
 	}
 }
