@@ -31,7 +31,7 @@ public class ModLootTablesModifier {
         return hostiles;
     }
 
-    public static void ModifyLootTables(){
+    public static void modifyLootTables(){
         Identifier[] hostiles = getHostileMobs();
         LootTableEvents.MODIFY.register(((resourceManager, lootManager, id, tableBuilder, source) -> {
             for (Identifier mob : hostiles) {

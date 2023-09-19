@@ -1,3 +1,7 @@
 {
-  "item.jellybeans-mod.jellybeans": "Jellybeans"
+  "item.jellybeans-mod.jellybeans": "Jellybeans",
+
+  "block.jellybeans-mod.empty_jar": "Empty Jar",
+
+  "itemgroup.jellybeans": "Jellybeans Mod"
 }

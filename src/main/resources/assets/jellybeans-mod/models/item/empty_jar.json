@@ -1,0 +1,6 @@
+{
+  "parent": "jellybeans-mod:block/empty_jar",
+  "textures": {
+    "3": "jellybeans-mod:block/empty_jar"
+  }
+}

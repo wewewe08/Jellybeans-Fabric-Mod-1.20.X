@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "jellybeans-mod:block/empty_jar"
+    }
+  }
+}

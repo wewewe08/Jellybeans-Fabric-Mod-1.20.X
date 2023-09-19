@@ -1,9 +1,7 @@
 package net.wewewe.jellybeansmod.Item;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -22,12 +20,6 @@ public class ModItems {
             .build())), "jellybeans");
 
     public static void initialize() {
-        JellyBeansMod.LOGGER.info("Registering JELLYBEANS to the FOOD_AND_DRINK item group.");
-
-        ItemGroupEvents
-                .modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK) //registers a "modify" event for the FOOD_AND_DRINK item group
-                .register((itemGroup) -> itemGroup.add(ModItems.JELLYBEANS)); //add the item to the group when you get access
-
-
+        JellyBeansMod.LOGGER.info("Registering items to " + JellyBeansMod.MOD_ID);
     }
 }
