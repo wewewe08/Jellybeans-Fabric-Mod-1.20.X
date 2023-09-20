@@ -1,0 +1,6 @@
+{
+  "parent": "jellybeans-mod:block/jar_of_jellybeans",
+  "textures": {
+    "3": "jellybeans-mod:block/jar_of_jellybeans"
+  }
+}

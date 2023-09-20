@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern":[
+    "###",
+    "#@#",
+    "###"
+  ],
+  "key":{
+    "#": {
+      "item": "jellybeans-mod:jellybeans"
+    },
+    "@": {
+      "item": "jellybeans-mod:empty_jar"
+    }
+  },
+  "result": {
+    "item": "jellybeans-mod:jar_of_jellybeans",
+    "count": 1
+  }
+}

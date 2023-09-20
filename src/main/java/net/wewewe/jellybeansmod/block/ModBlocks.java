@@ -12,10 +12,13 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.wewewe.jellybeansmod.JellyBeansMod;
 import net.wewewe.jellybeansmod.block.custom.Empty_Jar;
+import net.wewewe.jellybeansmod.block.custom.Jar_Of_Jellybeans;
 
 public class ModBlocks {
     public static final Block EMPTY_JAR = registerBlock("empty_jar",
             new Empty_Jar(FabricBlockSettings.copyOf(Blocks.FLOWER_POT).sounds(BlockSoundGroup.GLASS)));
+    public static final Block JAR_OF_JELLYBEANS = registerBlock("jar_of_jellybeans",
+            new Jar_Of_Jellybeans(FabricBlockSettings.copyOf(Blocks.FLOWER_POT).sounds(BlockSoundGroup.GLASS)));
 
     public static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

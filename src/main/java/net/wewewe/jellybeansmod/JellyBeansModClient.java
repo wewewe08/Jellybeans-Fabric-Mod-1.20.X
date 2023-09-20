@@ -9,5 +9,6 @@ public class JellyBeansModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient(){
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.EMPTY_JAR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.JAR_OF_JELLYBEANS, RenderLayer.getCutout());
     }
 }

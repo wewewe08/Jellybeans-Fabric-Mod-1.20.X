@@ -18,6 +18,7 @@ public class ModItemGroups {
                         //add items to this group
                         entries.add(ModItems.JELLYBEANS);
                         entries.add(ModBlocks.EMPTY_JAR);
+                        entries.add(ModBlocks.JAR_OF_JELLYBEANS);
                     }).build());
 
     public static void registerItemGroups(){
