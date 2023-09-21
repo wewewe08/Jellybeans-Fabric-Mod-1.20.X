@@ -9,8 +9,13 @@ import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.util.Identifier;
 import net.wewewe.jellybeansmod.Item.ModItems;
+import net.wewewe.jellybeansmod.block.ModBlocks;
 
 public class ModLootTablesModifier {
+    //fishing drops
+    private static final Identifier FISHING_LOOT_TABLE_ID =
+            new Identifier("minecraft","gameplay/fishing/treasure");
+    
     private static final String[] HOSTILE_MOBS = {
             "BLAZE", "CAVE_SPIDER", "CREEPER", "DROWNED",
             "ELDER_GUARDIAN", "ENDERMAN", "ENDERMITE", "EVOKER",
@@ -34,6 +39,16 @@ public class ModLootTablesModifier {
     public static void modifyLootTables(){
         Identifier[] hostiles = getHostileMobs();
         LootTableEvents.MODIFY.register(((resourceManager, lootManager, id, tableBuilder, source) -> {
+            if (FISHING_LOOT_TABLE_ID.equals(id)){
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .with(ItemEntry.builder(ModBlocks.JAR_OF_JELLYBEANS))
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(1f)) //drop chance
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1f, 1f)).build());
+                tableBuilder.pool(poolBuilder.build());
+            }
+
+            //hostile mob drops
             for (Identifier mob : hostiles) {
                 if (mob.equals(id)) {
                     LootPool.Builder poolBuilder = LootPool.builder()
