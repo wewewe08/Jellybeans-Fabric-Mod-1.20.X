@@ -43,7 +43,7 @@ public class ModLootTablesModifier {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .with(ItemEntry.builder(ModBlocks.JAR_OF_JELLYBEANS))
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(1f)) //drop chance
+                        .conditionally(RandomChanceLootCondition.builder(.5f)) //drop chance
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1f, 1f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
