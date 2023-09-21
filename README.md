@@ -13,3 +13,7 @@ A fabric mod that adds jellybeans into Minecraft! It counts as a food source, bu
 - An empty glass jar surrounded by jellybeans crafts a jar of jellybeans.
 
 ![image](https://github.com/wewewe08/jellybeans-mod-1.20.X/assets/31106392/70dd9f33-ad93-4714-8c46-9214d5bb3723)
+
+- New advancement!
+
+![image](https://github.com/wewewe08/Jellybeans-Fabric-Mod-1.20.X/assets/31106392/d377c12b-a1bd-4d71-a5d1-4b468d703ace)
