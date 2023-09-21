@@ -1,0 +1,31 @@
+{
+  "parent": "minecraft:husbandry/fishy_business",
+  "criteria": {
+    "jellybeans": {
+      "conditions": {
+        "item": {
+          "items": [
+            "jellybeans-mod:jar_of_jellybeans"
+          ]
+        }
+      },
+      "trigger": "minecraft:fishing_rod_hooked"
+    }
+  },
+  "display": {
+    "icon": {
+      "item": "jellybeans-mod:jellybeans"
+    },
+    "title": "BINGO",
+    "description": "You're Piranha Roll!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "requirements": [
+      [
+        "jellybeans"
+      ]
+    ],
+    "sends_telemetry_event": true
+  }
+}
